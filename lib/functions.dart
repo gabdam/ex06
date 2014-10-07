@@ -3,7 +3,9 @@ library functions;
 //Exercice 1
 bool palindrome(String w) {
 	for(int i = 0; i < w.length ~/ 2; i++) {           // Loop to test each letter
-      if(w[i] != w[w.length - i - 1]) return false; 
+      if(w[i] != w[w.length - i - 1]) {
+        return false; 
+      }
     }
     return true;
 }
@@ -75,24 +77,27 @@ List sortClubs(){
     
     
 
-
-    for(int i =0; i< team.length;i++){     //Pour que le nom d'équipe n'apparaisse qu'une seule fois
-       for(int j=0; j<i; j++){
-        if(team.elementAt(j) ==team.elementAt(i)){
-          team.remove(team.elementAt(j));
-          i=0;
-        }
-      }
-    }
-   for(int i=0; i<team.length;i = i+2){                     
-     team.insert(i+1, new List());
+// Remove duplicate team names
+    for(int i =0; i< team.length;i++){ //Check every element in the list one by one and keep index i
+           for(int j=0; j<team.length; j++){ //Check every element in the list one by one and keep index j
+            if(team.elementAt(j) ==team.elementAt(i) && j!=i){ // Compare if the element at i equals the element at j, if i is not equal to j
+              team.remove(team.elementAt(j)); ////If element at i = element at j, remove that element, team name
+              j--;
+            }
+          }
+     }
+    
+    team.sort(); // Sort teams alphabetically
+   
+    for(int i=0; i<team.length;i = i+2){                     
+     team.insert(i+1, new List());  // To insert the players list after the team name
    }
+
 
     for(int i=0; i<players.length;i++){                       
     int index = team.indexOf(roster[players.elementAt(i)]);
     team.elementAt(index+1).add(players.elementAt(i));                  
   }
-
 
 return team;
 }
