@@ -1,0 +1,4 @@
+name: ex06
+description: A sample command-line application for exercice 06
+#dev_dependencies:
+#  unittest: any
