@@ -1,0 +1,14 @@
+ex06
+
+?/20
+
+attention: formatage (voir: https://www.dartlang.org/articles/style-guide/)
+
+library functions;
+-->
+library ex06;
+
+6.5
+List sortClubs()
+-->
+List clubsWithPlayers(List players, List clubs) {
