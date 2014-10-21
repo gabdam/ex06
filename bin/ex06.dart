@@ -1,6 +1,6 @@
-import 'package:ex06/functions.dart';
+import 'package:ex06/fcn_06.dart';
 
-ex6_1() {
+ex6_1(){
   String w = "hello";
   print("1) Is the word $w a palindrome ? --> ${palindrome(w)}");
   w = "laval";
@@ -8,13 +8,13 @@ ex6_1() {
   print("===================================================");
 }
 
-ex6_2() {
+ex6_2(){
   var duration = time(); //call our function
   print("2) ${duration} days have passed between March 5th, 1999 and June 10th, 2003!"); //print the difference in days
   print("===================================================");
 }
 
-ex6_3() {
+ex6_3(){
   int grade = 95; //Trying with a result of 95
   print("3) A grade of $grade is converted to a ${convertGrades(grade)}");
   grade = 67;
@@ -29,7 +29,7 @@ ex6_3() {
   
 }
 
-ex6_4() {
+ex6_4(){
   //dans une fonction faire les 3 listes et les combiner en une seule pour retourner une liste dans main
   print("4) Differents names:");
   List names = ["Luchiano", "Jean-Loup", "Anthony", "Olivier", "Quinntin", "Maxime", "Genevieve","Jacques", "Marie-France"];
@@ -40,12 +40,16 @@ ex6_4() {
   print("===================================================");
 }
 
-ex6_5() {
-  print("5) Hockey players sorted by team:");
-  print(sortClubs());
+ex6_5(){
+  print("5) Hockey players sorted by team");
+  List players = [["Subban", "Galchenyuk", "Gallagher"], ["Ovechkin", "Chimera"], ["Marleau"]];
+  List team = ["Canadiens", "Capitals", "Sharks"];
+  print("The players are $players");
+  print("The teams are ${team}");
+  print("The teams sorted with their players ${sortedTeams(players, team)}");
 }
 
-main() {
+void main(){
   ex6_1();
   ex6_2();
   ex6_3();
