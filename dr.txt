@@ -12,3 +12,7 @@ library ex06;
 List sortClubs()
 -->
 List clubsWithPlayers(List players, List clubs) {
+
+
+Les changements on été effectués, merci!
+-Gabriel 
