@@ -1,5 +1,17 @@
 ex06
 
+18/20
+
+6.5
+-1
+Prepare two lists, one with the names of players and their CLUBS
+Make the third LIST 
+-1
+se il vous plaît ne pas utiliser les positions d'éléments de la liste 
+pour faire une correspondance entre les clubs et les joueurs
+
+---
+
 ?/20
 
 attention: formatage (voir: https://www.dartlang.org/articles/style-guide/)
@@ -7,6 +19,14 @@ attention: formatage (voir: https://www.dartlang.org/articles/style-guide/)
 library functions;
 -->
 library ex06;
+
+6.3
+
+  if(grade < 60){
+    return "E";
+  }
+  -->
+  return "E";
 
 6.5
 List sortClubs()
